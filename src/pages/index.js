@@ -1,11 +1,51 @@
 import Head from "next/head";
 import Image from "next/image";
-
-import { Hello } from "@components/index";
+import homeImg from "../../public/assets/home.jpg";
+import { Select, DatePicker, Button, Space, Card, Collapse } from "antd";
+const { Meta } = Card;
+const { RangePicker } = DatePicker;
+const { Panel } = Collapse;
 
 import styles from "@styles/Home.module.css";
+import Navbar from "@components/Navbar";
+import Faq from "@components/pageComponents/Faq";
 
 export default function Home() {
+	const placeOptions = [
+		{ value: "India", label: "India" },
+		{ value: "England", label: "England" },
+		{ value: "Dubai", label: "Dubai" },
+		{ value: "Ireland", label: "Ireland" }
+	];
+
+	const gridStyle = {
+		width: "25%",
+		textAlign: "center"
+	};
+
+	const faqs = [
+		{
+			question: "What is a travel guide?",
+			answer:
+				"A travel guide is a collection of travel tips and information that you can use to plan your next trip."
+		},
+		{
+			question: "How do I create a travel guide?",
+			answer:
+				'You can create a travel guide by clicking the "Create a travel guide" button in the top right corner of the page. You can then add a title, a description, and a list of destinations.'
+		},
+		{
+			question: "How do I add a destination to my travel guide?",
+			answer:
+				'You can add a destination by clicking the "Add a destination" button in the top right corner of the page. You can then add a title, a description, and a list of activities.'
+		},
+		{
+			question: "How do I add an activity to my destination?",
+			answer:
+				'You can add an activity by clicking the "Add an activity" button in the top right corner of the page. You can then add a title, a description, and a list of activities.'
+		}
+	];
+
 	return (
 		<div className={styles.container}>
 			<Head>
@@ -15,67 +55,150 @@ export default function Home() {
 			</Head>
 
 			<main className={styles.main}>
-				<h1 className={styles.title}>
-					Welcome to <a href="https://nextjs.org">Next.js!</a>
-				</h1>
-				<Hello
-					style={{
-						marginTop: "1rem",
-						fontSize: "30px",
-						fontWeight: "600",
-						color: "#0070f3",
-					}}
-				/>
-				<p className={styles.description}>
-					Get started by editing
-					<code className={styles.code}>pages/index.js</code>
-				</p>
-
-				<div className={styles.grid}>
-					<a href="https://nextjs.org/docs" className={styles.card}>
-						<h2>Documentation &rarr;</h2>
-						<p>Find in-depth information about Next.js features and API.</p>
-					</a>
-
-					<a href="https://nextjs.org/learn" className={styles.card}>
-						<h2>Learn &rarr;</h2>
-						<p>Learn about Next.js in an interactive course with quizzes!</p>
-					</a>
-
-					<a
-						href="https://github.com/vercel/next.js/tree/canary/examples"
-						className={styles.card}
-					>
-						<h2>Examples &rarr;</h2>
-						<p>Discover and deploy boilerplate example Next.js projects.</p>
-					</a>
-
-					<a
-						href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-						target="_blank"
-						rel="noopener noreferrer"
-						className={styles.card}
-					>
-						<h2>Deploy &rarr;</h2>
-						<p>
-							Instantly deploy your Next.js site to a public URL with Vercel.
-						</p>
-					</a>
+				<Navbar />
+				<div className={styles.header}>
+					<div>
+						<Image
+							alt="home_image"
+							src={homeImg}
+							layout="fill"
+							objectFit="cover"
+							className={styles.header_image}
+						/>
+					</div>
+					<div className={styles.header_details}>
+						<h1>Your Travel Partner</h1>
+						<div>
+							<Space>
+								<Select
+									defaultValue="India"
+									style={{ width: 120 }}
+									options={placeOptions}
+								/>
+								<Select
+									defaultValue="India"
+									style={{ width: 120 }}
+									options={placeOptions}
+								/>
+								<RangePicker showTime />
+								<Button type="primary">Search</Button>
+							</Space>
+						</div>
+					</div>
+				</div>
+				<div className={styles.wrapper}>
+					<h1>Travel guides</h1>
+					<div className={styles.card_container}>
+						<Card
+							hoverable
+							style={{
+								width: 250,
+								marginBlock: "1rem"
+							}}
+							cover={
+								<img
+									alt="example"
+									src="https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png"
+									style={{ height: 150, objectFit: "cover" }}
+								/>
+							}
+						>
+							<Meta title="Europe" />
+						</Card>
+						<Card
+							hoverable
+							style={{
+								width: 250,
+								marginBlock: "1rem"
+							}}
+							cover={
+								<img
+									alt="example"
+									src="https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png"
+									style={{ height: 150, objectFit: "cover" }}
+								/>
+							}
+						>
+							<Meta title="Europe" />
+						</Card>
+						<Card
+							hoverable
+							style={{
+								width: 250,
+								marginBlock: "1rem"
+							}}
+							cover={
+								<img
+									alt="example"
+									src="https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png"
+									style={{ height: 150, objectFit: "cover" }}
+								/>
+							}
+						>
+							<Meta title="Europe" />
+						</Card>
+						<Card
+							hoverable
+							style={{
+								width: 250,
+								marginBlock: "1rem"
+							}}
+							cover={
+								<img
+									alt="example"
+									src="https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png"
+									style={{ height: 150, objectFit: "cover" }}
+								/>
+							}
+						>
+							<Meta title="Europe" />
+						</Card>
+						<Card
+							hoverable
+							style={{
+								width: 250,
+								marginBlock: "1rem"
+							}}
+							cover={
+								<img
+									alt="example"
+									src="https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png"
+									style={{ height: 150, objectFit: "cover" }}
+								/>
+							}
+						>
+							<Meta title="Europe" />
+						</Card>
+					</div>
+				</div>
+				<div className={styles.wrapper}>
+					<h1>Popular Routes</h1>
+					<Card title="Thailand">
+						<Card.Grid style={gridStyle}>Budapest &#8594; Bangkok</Card.Grid>
+						<Card.Grid style={gridStyle}>Budapest &#8594; Bangkok</Card.Grid>
+						<Card.Grid style={gridStyle}>Budapest &#8594; Bangkok</Card.Grid>
+						<Card.Grid style={gridStyle}>Budapest &#8594; Bangkok</Card.Grid>
+						<Card.Grid style={gridStyle}>Budapest &#8594; Bangkok</Card.Grid>
+						<Card.Grid style={gridStyle}>Budapest &#8594; Bangkok</Card.Grid>
+						<Card.Grid style={gridStyle}>Budapest &#8594; Bangkok</Card.Grid>
+					</Card>
+					<Card title="India">
+						<Card.Grid style={gridStyle}>Budapest &#8594; Bangkok</Card.Grid>
+						<Card.Grid style={gridStyle}>Budapest &#8594; Bangkok</Card.Grid>
+						<Card.Grid style={gridStyle}>Budapest &#8594; Bangkok</Card.Grid>
+						<Card.Grid style={gridStyle}>Budapest &#8594; Bangkok</Card.Grid>
+						<Card.Grid style={gridStyle}>Budapest &#8594; Bangkok</Card.Grid>
+						<Card.Grid style={gridStyle}>Budapest &#8594; Bangkok</Card.Grid>
+						<Card.Grid style={gridStyle}>Budapest &#8594; Bangkok</Card.Grid>
+					</Card>
+				</div>
+				<div className={styles.wrapper}>
+					<h1>Frequently Asked Questions</h1>
+					<Faq faqs={faqs} />
 				</div>
 			</main>
 
-			<footer className={styles.footer}>
-				<a
-					href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-					target="_blank"
-					rel="noopener noreferrer"
-				>
-					Powered by
-					<span className={styles.logo}>
-						<Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
-					</span>
-				</a>
-			</footer>
+			<footer className={styles.footer}></footer>
 		</div>
 	);
 }

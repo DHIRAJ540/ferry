@@ -1,0 +1,20 @@
+.nav_container {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding-inline: 2rem;
+}
+
+.ham_menu {
+	display: none;
+}
+
+@media (max-width: 768px) {
+	.menu {
+		display: none;
+	}
+
+	.ham_menu {
+		display: block;
+	}
+}
