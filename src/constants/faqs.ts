@@ -1,11 +1,4 @@
-export const placeOptions = [
-	{ value: "India", label: "India" },
-	{ value: "England", label: "England" },
-	{ value: "Dubai", label: "Dubai" },
-	{ value: "Ireland", label: "Ireland" }
-];
-
-export const faqs = [
+export const FAQS = [
 	{
 		question: "What is a travel guide?",
 		answer:
@@ -27,3 +20,5 @@ export const faqs = [
 			'You can add an activity by clicking the "Add an activity" button in the top right corner of the page. You can then add a title, a description, and a list of activities.'
 	}
 ];
+
+export default FAQS;

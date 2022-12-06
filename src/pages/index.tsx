@@ -1,21 +1,23 @@
 import Head from "next/head";
 import Image from "next/image";
+import { CSSProperties } from "react";
 
 import { Select, DatePicker, Button, Space, Card } from "antd";
-const { Meta } = Card;
-const { RangePicker } = DatePicker;
 
 import styles from "@styles/Home.module.css";
 import Navbar from "@components/appComponents/Navbar";
 import Faq from "@components/pageComponents/Faq";
-import { faqs, placeOptions } from "src/constants/constants";
+import { FAQS, PLACE_OPTIONS } from "@constants/index";
+
+const { RangePicker } = DatePicker;
+const { Meta } = Card;
+
+const gridStyle: CSSProperties = {
+	width: "25%",
+	textAlign: "center"
+};
 
 export default function Home() {
-	const gridStyle = {
-		width: "25%",
-		textAlign: "center"
-	};
-
 	return (
 		<div className={styles.container}>
 			<Head>
@@ -42,12 +44,12 @@ export default function Home() {
 								<Select
 									defaultValue="India"
 									style={{ width: 120 }}
-									options={placeOptions}
+									options={PLACE_OPTIONS}
 								/>
 								<Select
 									defaultValue="India"
 									style={{ width: 120 }}
-									options={placeOptions}
+									options={PLACE_OPTIONS}
 								/>
 								<RangePicker showTime />
 								<Button type="primary">Search</Button>
@@ -163,10 +165,9 @@ export default function Home() {
 				</div>
 				<div className={styles.wrapper}>
 					<h1>Frequently Asked Questions</h1>
-					<Faq faqs={faqs} />
+					<Faq faqs={FAQS} />
 				</div>
 			</main>
-
 			<footer className={styles.footer}></footer>
 		</div>
 	);
