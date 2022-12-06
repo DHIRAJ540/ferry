@@ -1,50 +1,20 @@
 import Head from "next/head";
 import Image from "next/image";
-import homeImg from "../../public/assets/home.jpg";
-import { Select, DatePicker, Button, Space, Card, Collapse } from "antd";
+
+import { Select, DatePicker, Button, Space, Card } from "antd";
 const { Meta } = Card;
 const { RangePicker } = DatePicker;
-const { Panel } = Collapse;
 
 import styles from "@styles/Home.module.css";
-import Navbar from "@components/Navbar";
+import Navbar from "@components/appComponents/Navbar";
 import Faq from "@components/pageComponents/Faq";
+import { faqs, placeOptions } from "src/constants/constants";
 
 export default function Home() {
-	const placeOptions = [
-		{ value: "India", label: "India" },
-		{ value: "England", label: "England" },
-		{ value: "Dubai", label: "Dubai" },
-		{ value: "Ireland", label: "Ireland" }
-	];
-
 	const gridStyle = {
 		width: "25%",
 		textAlign: "center"
 	};
-
-	const faqs = [
-		{
-			question: "What is a travel guide?",
-			answer:
-				"A travel guide is a collection of travel tips and information that you can use to plan your next trip."
-		},
-		{
-			question: "How do I create a travel guide?",
-			answer:
-				'You can create a travel guide by clicking the "Create a travel guide" button in the top right corner of the page. You can then add a title, a description, and a list of destinations.'
-		},
-		{
-			question: "How do I add a destination to my travel guide?",
-			answer:
-				'You can add a destination by clicking the "Add a destination" button in the top right corner of the page. You can then add a title, a description, and a list of activities.'
-		},
-		{
-			question: "How do I add an activity to my destination?",
-			answer:
-				'You can add an activity by clicking the "Add an activity" button in the top right corner of the page. You can then add a title, a description, and a list of activities.'
-		}
-	];
 
 	return (
 		<div className={styles.container}>
@@ -60,10 +30,9 @@ export default function Home() {
 					<div>
 						<Image
 							alt="home_image"
-							src={homeImg}
-							layout="fill"
-							objectFit="cover"
+							src="/assets/home.jpg"
 							className={styles.header_image}
+							layout="fill"
 						/>
 					</div>
 					<div className={styles.header_details}>
@@ -173,7 +142,7 @@ export default function Home() {
 				</div>
 				<div className={styles.wrapper}>
 					<h1>Popular Routes</h1>
-					<Card title="Thailand">
+					<Card title="Thailand" style={{ marginBottom: ".5rem" }}>
 						<Card.Grid style={gridStyle}>Budapest &#8594; Bangkok</Card.Grid>
 						<Card.Grid style={gridStyle}>Budapest &#8594; Bangkok</Card.Grid>
 						<Card.Grid style={gridStyle}>Budapest &#8594; Bangkok</Card.Grid>

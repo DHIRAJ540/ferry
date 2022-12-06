@@ -1,13 +1,16 @@
 import React, { useState } from "react";
-import styles from "./Navbar.module.css";
+
 import { Menu, Button, Drawer } from "antd";
 import { MenuOutlined } from "@ant-design/icons";
+const { Item } = Menu;
+
+import styles from "../../styles/Navbar.module.css";
 
 const MenuComponent = ({ mode, items }) => {
 	return (
 		<Menu mode={mode}>
 			{items.map((item, index) => (
-				<Menu.Item key={index}>{item.label}</Menu.Item>
+				<Item key={index}>{item.label}</Item>
 			))}
 		</Menu>
 	);
@@ -49,7 +52,7 @@ const Navbar = () => {
 							placement="right"
 							closable={false}
 							onClose={() => setIsOpen(false)}
-							visible={isOpen}
+							open={isOpen}
 							width="300px"
 						>
 							<MenuComponent items={items} mode="vertical" />
