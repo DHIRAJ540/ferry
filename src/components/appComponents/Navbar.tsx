@@ -5,12 +5,15 @@ import { MenuOutlined } from "@ant-design/icons";
 const { Item } = Menu;
 
 import styles from "../../styles/Navbar.module.css";
+import Link from "next/link";
 
-const MenuComponent = ({ mode, items }) => {
+const MenuComponent = ({ mode, navOptions }) => {
 	return (
 		<Menu mode={mode}>
-			{items.map((item, index) => (
-				<Item key={index}>{item.label}</Item>
+			{navOptions.map((item, index) => (
+				<Link href={`/${item.key}`}>
+					<Item key={index}>{item.label}</Item>
+				</Link>
 			))}
 		</Menu>
 	);
@@ -20,12 +23,12 @@ const Navbar = () => {
 	const [isOpen, setIsOpen] = useState(false);
 
 	const items = [
-		{ label: "Home", key: "Home" },
-		{ label: "Ferry", key: "Ferry" },
-		{ label: "Destinations", key: "Destinations" },
-		{ label: "Tour Planner", key: "Tour Planner" },
-		{ label: "Manage Bookings", key: "Manage Bookings" },
-		{ label: "Blog", key: "Blog" },
+		{ label: "Home", key: "home" },
+		{ label: "Ferry", key: "ferry" },
+		{ label: "Destinations", key: "destinations" },
+		{ label: "Tour Planner", key: "tour-planner" },
+		{ label: "Manage Bookings", key: "manage-bookings" },
+		{ label: "Blog", key: "blog" },
 		{ label: "about", key: "about" },
 		{ label: "contact", key: "contact" }
 	];
@@ -38,7 +41,7 @@ const Navbar = () => {
 				</div>
 				<div>
 					<div className={styles.menu}>
-						<MenuComponent items={items} mode="horizontal" />
+						<MenuComponent navOptions={items} mode="horizontal" />
 					</div>
 					<div className={styles.ham_menu}>
 						<Button
@@ -55,7 +58,7 @@ const Navbar = () => {
 							open={isOpen}
 							width="300px"
 						>
-							<MenuComponent items={items} mode="vertical" />
+							<MenuComponent navOptions={items} mode="vertical" />
 						</Drawer>
 					</div>
 				</div>

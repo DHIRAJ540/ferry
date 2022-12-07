@@ -6,6 +6,7 @@ import { Select, DatePicker, Button, Space, Card } from "antd";
 
 import styles from "@styles/Home.module.css";
 import Navbar from "@components/appComponents/Navbar";
+import Footer from "@components/appComponents/Footer";
 import Faq from "@components/pageComponents/Faq";
 import { FAQS, PLACE_OPTIONS } from "@constants/index";
 
@@ -34,7 +35,8 @@ export default function Home() {
 							alt="home_image"
 							src="/assets/home.jpg"
 							className={styles.header_image}
-							layout="fill"
+							width={2000}
+							height={2000}
 						/>
 					</div>
 					<div className={styles.header_details}>
@@ -168,7 +170,7 @@ export default function Home() {
 					<Faq faqs={FAQS} />
 				</div>
 			</main>
-			<footer className={styles.footer}></footer>
+			<Footer />
 		</div>
 	);
 }
