@@ -53,7 +53,13 @@ export default function Home() {
 									style={{ width: 120 }}
 									options={PLACE_OPTIONS}
 								/>
-								<RangePicker showTime />
+								<RangePicker
+									showTime
+									style={{
+										maxWidth: "300px",
+										flexWrap: "nowrap"
+									}}
+								/>
 								<Button type="primary">Search</Button>
 							</Space>
 						</div>

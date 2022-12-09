@@ -8,6 +8,7 @@
 	padding: 2rem;
 	box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 	border-radius: 5px;
+	flex-wrap: wrap;
 }
 
 .ferry_container > div {
@@ -30,6 +31,7 @@
 	display: flex;
 	align-items: center;
 	gap: 0.5rem;
+	flex-wrap: wrap;
 }
 
 .input_container > div {

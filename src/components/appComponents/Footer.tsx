@@ -16,6 +16,7 @@ const Footer: React.FC = () => {
 					width={609}
 					height={59}
 					alt="Payment-icons"
+					style={{ width: "100%"}}
 				/>
 				<p>
 					All Major Credit/Debit cards, UPI, Google Pay, PhonePe amd BHIM

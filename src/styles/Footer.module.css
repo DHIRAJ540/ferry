@@ -21,6 +21,7 @@
 	display: flex;
 	justify-content: space-between;
 	border-top: 1px solid rgb(201, 201, 201);
+	flex-wrap: wrap;
 }
 
 .footer_details_section {

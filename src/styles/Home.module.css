@@ -30,6 +30,7 @@
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
+	flex-wrap: wrap;
 }
 
 .card_container {
@@ -136,22 +137,13 @@
 	margin-left: 0.5rem;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 768px) {
 	.grid {
 		width: 100%;
 		flex-direction: column;
 	}
-}
 
-@media (prefers-color-scheme: dark) {
-	.card,
-	.footer {
-		border-color: #222;
-	}
-	.code {
-		background: #111;
-	}
-	.logo img {
-		filter: invert(1);
+	.wrapper {
+		padding: 0.5rem;
 	}
 }

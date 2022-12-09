@@ -9,6 +9,10 @@
 	display: none;
 }
 
+.nav_menu li {
+	padding: 0;
+}
+
 @media (max-width: 768px) {
 	.menu {
 		display: none;
@@ -16,5 +20,9 @@
 
 	.ham_menu {
 		display: block;
+	}
+
+	.nav_container {
+		padding: 0.5rem;
 	}
 }
