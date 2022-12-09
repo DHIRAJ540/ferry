@@ -7,85 +7,40 @@ const { Item } = Menu;
 import styles from "../../styles/Navbar.module.css";
 import Link from "next/link";
 
+const MenuComponent = ({ mode, navOptions }) => {
+	return (
+		<Menu
+			mode={mode}
+			items={navOptions.map((item, index) => ({
+				label: <Link href={`/${item.key}`}>{item.label}</Link>
+			}))}
+		></Menu>
+	);
+};
+
 const Navbar = () => {
 	const [isOpen, setIsOpen] = useState(false);
 
 	const items = [
-		{
-			label: (
-				<Link href={`/`} key="home">
-					<Item>Home</Item>
-				</Link>
-			),
-			key: "home"
-		},
-		{
-			label: (
-				<Link href={`/ferry`} key="ferry">
-					<Item>Ferry</Item>
-				</Link>
-			),
-			key: "ferry"
-		},
-		{
-			label: (
-				<Link href={`/destinations`} key="destinations">
-					<Item>Destinations</Item>
-				</Link>
-			),
-			key: "destinations"
-		},
-		{
-			label: (
-				<Link href={`/tour-planner`} key="tour-planner">
-					<Item>Tour planner</Item>
-				</Link>
-			),
-			key: "tour-planner"
-		},
-		{
-			label: (
-				<Link href={`/manage-bookings`} key="manage-bookings">
-					<Item>Manage bookings</Item>
-				</Link>
-			),
-			key: "manage-bookings"
-		},
-		{
-			label: (
-				<Link href={`/blog`} key="blog">
-					<Item>Blog</Item>
-				</Link>
-			),
-			key: "blog"
-		},
-		{
-			label: (
-				<Link href={`/about`} key="about">
-					<Item>About</Item>
-				</Link>
-			),
-			key: "about"
-		},
-		{
-			label: (
-				<Link href={`/contact`} key="contact">
-					<Item>Contact</Item>
-				</Link>
-			),
-			key: "contact"
-		}
+		{ label: "Home", key: "/" },
+		{ label: "Ferry", key: "ferry" },
+		{ label: "Destinations", key: "destinations" },
+		{ label: "Tour Planner", key: "tour-planner" },
+		{ label: "Manage Bookings", key: "manage-bookings" },
+		{ label: "Blog", key: "blog" },
+		{ label: "about", key: "about" },
+		{ label: "contact", key: "contact" }
 	];
 
 	return (
 		<div>
 			<div className={styles.nav_container}>
-				<div className="log">
+				<div className="logo">
 					<p>FerryAsia</p>
 				</div>
 				<div>
 					<div className={styles.menu}>
-						<Menu items={items} mode="horizontal" className="nav_menu" />
+						<MenuComponent navOptions={items} mode="horizontal" />
 					</div>
 					<div className={styles.ham_menu}>
 						<Button
@@ -102,7 +57,7 @@ const Navbar = () => {
 							open={isOpen}
 							width="300px"
 						>
-							<Menu items={items} mode="vertical" className="nav_menu" />
+							<MenuComponent navOptions={items} mode="vertical" />
 						</Drawer>
 					</div>
 				</div>
