@@ -80,7 +80,7 @@ const Navbar = () => {
 	return (
 		<div>
 			<div className={styles.nav_container}>
-				<div className="logo">
+				<div className="log">
 					<p>FerryAsia</p>
 				</div>
 				<div>
