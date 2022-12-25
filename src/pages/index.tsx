@@ -2,13 +2,13 @@ import Head from "next/head";
 import Image from "next/image";
 import { CSSProperties } from "react";
 
-import { Select, DatePicker, Button, Space, Card } from "antd";
+import { Select, DatePicker, Button, Space, Card, InputNumber } from "antd";
 
 import styles from "@styles/Home.module.css";
 import Navbar from "@components/appComponents/Navbar";
 import Footer from "@components/appComponents/Footer";
 import Faq from "@components/pageComponents/Faq";
-import { FAQS, PLACE_OPTIONS } from "@constants/index";
+import { FAQS, PLACE_OPTIONS, TOURS } from "@constants/index";
 
 const { RangePicker } = DatePicker;
 const { Meta } = Card;
@@ -31,41 +31,162 @@ export default function Home() {
 				<Navbar />
 				<div className={styles.header}>
 					<div>
-						<Image
+						{/* <Image
 							alt="home_image"
 							src="/assets/home.jpg"
 							className={styles.header_image}
 							width={2000}
 							height={2000}
-						/>
+						/> */}
 					</div>
 					<div className={styles.header_details}>
-						<h1>Your Travel Partner</h1>
+						<h1>Book Ferry Tickets in Andaman</h1>
+						<h2>
+							<span>Ferry Operates Between</span> Port Blair, Havelock & Neil
+							Islands
+						</h2>
+						<h2>
+							<span>Boat Operates For</span> Ross Island, North Bay, Elephanta
+							Beach, Red Skin, Jolly Bouy{" "}
+						</h2>
 						<div>
-							<Space>
-								<Select
-									defaultValue="India"
-									style={{ width: 120 }}
-									options={PLACE_OPTIONS}
-								/>
-								<Select
-									defaultValue="India"
-									style={{ width: 120 }}
-									options={PLACE_OPTIONS}
-								/>
-								<RangePicker
-									showTime
-									style={{
-										maxWidth: "300px",
-										flexWrap: "nowrap"
-									}}
-								/>
-								<Button type="primary">Search</Button>
-							</Space>
+							<div>
+								<div className={styles.travel_types}>
+									<div>
+										<img src="/assets/home.jpg" alt="home" />
+										<p>Ferry</p>
+									</div>
+									<div>
+										<img src="/assets/home.jpg" alt="home" />
+										<p>Boat</p>
+									</div>
+									<div>
+										<img src="/assets/home.jpg" alt="home" />
+										<p>Cab</p>
+									</div>
+									<div>
+										<img src="/assets/home.jpg" alt="home" />
+										<p>Activity</p>
+									</div>
+								</div>
+							</div>
+							<div className={styles.ferry_container}>
+								<div>
+									<p>From</p>
+									<Select
+										defaultValue="India"
+										style={{ width: 120 }}
+										options={PLACE_OPTIONS}
+									/>
+								</div>
+
+								<div>
+									<p>To</p>
+									<Select
+										defaultValue="India"
+										style={{ width: 120 }}
+										options={PLACE_OPTIONS}
+									/>
+								</div>
+
+								<div>
+									<p>Travel Date</p>
+									<DatePicker />
+								</div>
+
+								<div>
+									<p>Passengers</p>
+									<div className={styles.input_container}>
+										<div>
+											<span>Adult</span>
+											<InputNumber />
+										</div>
+										<div>
+											<span>Children</span>
+											<InputNumber />
+										</div>
+									</div>
+								</div>
+								<div className={styles.button_container}>
+									<Button type="primary">Search</Button>
+								</div>
+							</div>
 						</div>
 					</div>
 				</div>
 				<div className={styles.wrapper}>
+					<div className={styles.features}>
+						<div>
+							<Image
+								alt="home_image"
+								src="/assets/see-it-all.jpg"
+								className={styles.header_image}
+								width={2000}
+								height={2000}
+							/>
+							<div>
+								<h4>See it all</h4>
+								<p>
+									Find the best route to your next adventure. We offer more than
+									250+ ferry routes in andaman.
+								</p>
+							</div>
+						</div>
+						<div>
+							<Image
+								alt="home_image"
+								src="/assets/compare-right-here.jpg"
+								className={styles.header_image}
+								width={2000}
+								height={2000}
+							/>
+							<div>
+								<h4>See it all</h4>
+								<p>
+									Find the best route to your next adventure. We offer more than
+									250+ ferry routes in andaman.
+								</p>
+							</div>
+						</div>
+						<div>
+							<Image
+								alt="home_image"
+								src="/assets/best-price.jpg"
+								className={styles.header_image}
+								width={2000}
+								height={2000}
+							/>
+							<div>
+								<h4>See it all</h4>
+								<p>
+									Find the best route to your next adventure. We offer more than
+									250+ ferry routes in andaman.
+								</p>
+							</div>
+						</div>
+					</div>
+					<div
+						style={{
+							width: "100%",
+							display: "flex",
+							justifyContent: "center",
+							marginTop: "1rem"
+						}}
+					>
+						<Button type="primary">Book Andaman Ferry Now!</Button>
+					</div>
+					<div className={styles.description}>
+						<p>
+							Ferrybooking offers cheapest, safest and most reliably trusted
+							ferry ticketing services for routes in Andaman islands. Andaman is
+							a group of islands interconnected only by seaways. Ferry seats are
+							limited and may not always be available on your desired dates.
+							Ferrybooking.in recommends booking confirmed Ferry Tickets before
+							booking Hotels, Cabs/Sight Seeing and other Activities
+						</p>
+					</div>
+				</div>
+				{/* <div className={styles.wrapper}>
 					<h1>Travel guides</h1>
 					<div className={styles.card_container}>
 						<Card
@@ -149,7 +270,7 @@ export default function Home() {
 							<Meta title="Europe" />
 						</Card>
 					</div>
-				</div>
+				</div> */}
 				<div className={styles.wrapper}>
 					<h1>Popular Routes</h1>
 					<Card title="Thailand" style={{ marginBottom: ".5rem" }}>
@@ -170,6 +291,131 @@ export default function Home() {
 						<Card.Grid style={gridStyle}>Budapest &#8594; Bangkok</Card.Grid>
 						<Card.Grid style={gridStyle}>Budapest &#8594; Bangkok</Card.Grid>
 					</Card>
+				</div>
+				<div className={styles.wrapper}>
+					<div className={styles.operators}>
+						<h3>The Best Prices from Leading Ferry Operators in Andaman</h3>
+						<div>
+							<Image
+								alt="home_image"
+								src="/assets/green-ocean-seaways.jpg"
+								className={styles.header_image}
+								width={2000}
+								height={2000}
+							/>
+							<Image
+								alt="home_image"
+								src="/assets/makruzz-logo.jpg"
+								className={styles.header_image}
+								width={2000}
+								height={2000}
+							/>
+							<Image
+								alt="home_image"
+								src="/assets/ittpl-logo.jpg"
+								className={styles.header_image}
+								width={2000}
+								height={2000}
+							/>
+						</div>
+					</div>
+				</div>
+				<div className={styles.wrapper}>
+					<div className={styles.description}>
+						<h3>About Ferry Booking</h3>
+						<p>
+							Ferrybooking.in takes care of all your Andaman ferry booking needs
+							with our online ferry booking system integrated with all popular
+							ferry companies in Andaman. Search ferry between two destinations
+							like Port Blair to Havelock, Havelock to Neil, Neil to Port Blair
+							and compare different company's ferry tickets offer and prices at
+							one place and book instantly through us.
+						</p>
+						<p>
+							We provide ferry and boat booking services for Inter-Island
+							Connectivity in Andaman & Nicobar Islands to make your trip to
+							Andaman hassle-free. In addition to ferry and boat tickets, one
+							can also book tickets for scuba diving in Andaman, sea walk and
+							many other activities. You can also search for various cruise
+							bookings in Port Blair, Havelock, and Neil Islands.
+						</p>
+						<p>
+							FerryBooking.in is an Authorised private ferry and boat ticketing
+							channel for various tourist destinations in Andaman and Nicobar
+							Islands.
+						</p>
+						<p>
+							FerryBooking.in provides confirmed online tickets for ferries and
+							boats of various private operator like Makruzz and Green Ocean for
+							destinations like Port Blair to Havelock island, Neil island, Ross
+							island, North bay, Red/Skin Jolly buoy and Elephant beach.
+						</p>
+						<p>
+							Ferry tickets in Andaman can get really expensive at the last
+							minute or even worse, won't be available, so book tickets for
+							Andaman and Nicobar Island ferries online to avoid inconvenience
+						</p>
+					</div>
+				</div>
+				<div className={styles.wrapper}>
+					<h4>Explore activities</h4>
+					<div className={styles.tours}>
+						{TOURS.map((item, index) => (
+							<div>
+								<Card
+									hoverable
+									style={{ width: 300 }}
+									cover={
+										<img
+											alt="example"
+											src="https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png"
+											style={{ height: 200, objectFit: "cover" }}
+										/>
+									}
+								>
+									<Meta title={item.title} description={item.subtitle} />
+								</Card>
+							</div>
+						))}
+					</div>
+				</div>
+				<div className={styles.wrapper}>
+					<div className={styles.operators}>
+						<h3>Ticketing partner for major ferry in andaman islands</h3>
+						<div>
+							<Image
+								alt="home_image"
+								src="/assets/green-ocean-seaways.jpg"
+								className={styles.header_image}
+								width={2000}
+								height={2000}
+							/>
+							<Image
+								alt="home_image"
+								src="/assets/makruzz-logo.jpg"
+								className={styles.header_image}
+								width={2000}
+								height={2000}
+							/>
+							<Image
+								alt="home_image"
+								src="/assets/ittpl-logo.jpg"
+								className={styles.header_image}
+								width={2000}
+								height={2000}
+							/>
+						</div>
+					</div>
+					<div
+						style={{
+							width: "100%",
+							display: "flex",
+							justifyContent: "center",
+							marginTop: "1rem"
+						}}
+					>
+						<Button type="primary">Book Andaman Ferry Now!</Button>
+					</div>
 				</div>
 				<div className={styles.wrapper}>
 					<h1>Frequently Asked Questions</h1>

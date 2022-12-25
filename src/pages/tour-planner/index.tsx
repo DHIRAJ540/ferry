@@ -64,6 +64,7 @@ const TourPlanner = (props: Props) => {
 							</div>
 						</div>
 						<div className={styles.tours}>
+
 							{TOURS.map((item, index) => (
 								<div>
 									<Card
