@@ -10,7 +10,7 @@ import Footer from "@components/appComponents/Footer";
 import Faq from "@components/pageComponents/Faq";
 import { FAQS, PLACE_OPTIONS, TOURS } from "@constants/index";
 
-const { RangePicker } = DatePicker;
+
 const { Meta } = Card;
 
 const gridStyle: CSSProperties = {
@@ -426,3 +426,5 @@ export default function Home() {
 		</div>
 	);
 }
+
+

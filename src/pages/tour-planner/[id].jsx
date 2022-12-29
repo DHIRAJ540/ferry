@@ -8,6 +8,7 @@ import styles from "../../styles/TourDetails.module.css";
 import TOURS from "../../constants/tours";
 
 const TourDetails = () => {
+
 	return (
 		<div>
 			<Navbar />
@@ -124,3 +125,4 @@ const TourDetails = () => {
 };
 
 export default TourDetails;
+

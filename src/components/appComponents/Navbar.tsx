@@ -22,7 +22,7 @@ const Navbar = () => {
 	const [isOpen, setIsOpen] = useState(false);
 
 	const items = [
-		{ label: "Home", key: "/" },
+		{ label: "Home", key: "" },
 		{ label: "Ferry", key: "ferry" },
 		{ label: "Destinations", key: "destinations" },
 		{ label: "Tour Planner", key: "tour-planner" },

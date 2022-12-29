@@ -12,7 +12,7 @@ import TOURS from "../../constants/tours";
 
 type Props = {};
 
-const TourPlanner = (props: Props) => {
+const TourPlanner = () => {
 	return (
 		<div>
 			<Navbar />
@@ -64,16 +64,15 @@ const TourPlanner = (props: Props) => {
 							</div>
 						</div>
 						<div className={styles.tours}>
-
 							{TOURS.map((item, index) => (
-								<div>
+								<div key={index}>
 									<Card
 										hoverable
 										style={{ width: 300 }}
 										cover={
 											<img
 												alt="example"
-												src="https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png"
+												src="/assets/home.jpg"
 												style={{ height: 200, objectFit: "cover" }}
 											/>
 										}
