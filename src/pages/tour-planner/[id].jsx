@@ -3,8 +3,8 @@ import Image from "next/image";
 
 import { Input, InputNumber, Button } from "antd";
 
-import Navbar from "../../components/appComponents/Navbar.tsx";
-import Footer from "../../components/appComponents/Footer.tsx";
+import Navbar from "../../components/appComponents/Navbar";
+import Footer from "../../components/appComponents/Footer";
 import styles from "../../styles/TourDetails.module.css";
 import TOURS from "../../constants/tours";
 

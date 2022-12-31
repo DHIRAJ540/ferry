@@ -2,8 +2,8 @@ import React from "react";
 
 import { DatePicker, InputNumber, Button } from "antd";
 
-import Navbar from "../../components/appComponents/Navbar.tsx";
-import Footer from "../../components/appComponents/Footer.tsx";
+import Navbar from "../../components/appComponents/Navbar";
+import Footer from "../../components/appComponents/Footer";
 import styles from "../../styles/Ferry.module.css";
 
 type Props = {};

@@ -5,8 +5,8 @@ import { Slider, Select, DatePicker, Card } from "antd";
 const { RangePicker } = DatePicker;
 const { Meta } = Card;
 
-import Navbar from "../../components/appComponents/Navbar.tsx";
-import Footer from "../../components/appComponents/Footer.tsx";
+import Navbar from "../../components/appComponents/Navbar";
+import Footer from "../../components/appComponents/Footer";
 import styles from "../../styles/TourPlanner.module.css";
 import PLACE_OPTIONS from "../../constants/places";
 import TOURS from "../../constants/tours";

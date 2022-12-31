@@ -3,8 +3,8 @@ import React from "react";
 import { Input, Select } from "antd";
 const { TextArea } = Input;
 
-import Navbar from "../../components/appComponents/Navbar.tsx";
-import Footer from "../../components/appComponents/Footer.tsx";
+import Navbar from "../../components/appComponents/Navbar";
+import Footer from "../../components/appComponents/Footer";
 import styles from "../../styles/Contact.module.css";
 
 type Props = {};
