@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 
 import { Slider, Select, DatePicker, Card } from "antd";
 const { RangePicker } = DatePicker;
@@ -47,19 +48,39 @@ const TourPlanner = () => {
 					<div>
 						<div className={styles.tour_types}>
 							<div>
-								<img src="/assets/home.jpg" alt="home" />
+								<Image
+									src="/assets/home.jpg"
+									alt="home"
+									width={2000}
+									height={2000}
+								/>
 								<p>Water sports</p>
 							</div>
 							<div>
-								<img src="/assets/home.jpg" alt="home" />
+								<Image
+									src="/assets/home.jpg"
+									alt="home"
+									width={2000}
+									height={2000}
+								/>
 								<p>Adeventure</p>
 							</div>
 							<div>
-								<img src="/assets/home.jpg" alt="home" />
+								<Image
+									src="/assets/home.jpg"
+									alt="home"
+									width={2000}
+									height={2000}
+								/>
 								<p>Romantic</p>
 							</div>
 							<div>
-								<img src="/assets/home.jpg" alt="home" />
+								<Image
+									src="/assets/home.jpg"
+									alt="home"
+									width={2000}
+									height={2000}
+								/>
 								<p>Tour</p>
 							</div>
 						</div>
@@ -70,10 +91,12 @@ const TourPlanner = () => {
 										hoverable
 										style={{ width: 300 }}
 										cover={
-											<img
+											<Image
 												alt="example"
 												src="/assets/home.jpg"
 												style={{ height: 200, objectFit: "cover" }}
+												width={2000}
+												height={2000}
 											/>
 										}
 									>

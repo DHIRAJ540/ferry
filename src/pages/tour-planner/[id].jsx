@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 
 import { Input, InputNumber, Button } from "antd";
 
@@ -8,14 +9,18 @@ import styles from "../../styles/TourDetails.module.css";
 import TOURS from "../../constants/tours";
 
 const TourDetails = () => {
-
 	return (
 		<div>
 			<Navbar />
 			<div className={styles.wrapper}>
 				<div className={styles.details_container}>
 					<div className={styles.left_container}>
-						<img src="/assets/home.jpg" alt="home" />
+						<Image
+							src="/assets/home.jpg"
+							alt="home"
+							height={500}
+							width={2000}
+						/>
 						<div className={styles.details}>
 							<div>
 								<h2>Inclusions</h2>
@@ -125,4 +130,3 @@ const TourDetails = () => {
 };
 
 export default TourDetails;
-

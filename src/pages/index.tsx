@@ -10,7 +10,6 @@ import Footer from "@components/appComponents/Footer";
 import Faq from "@components/pageComponents/Faq";
 import { FAQS, PLACE_OPTIONS, TOURS } from "@constants/index";
 
-
 const { Meta } = Card;
 
 const gridStyle: CSSProperties = {
@@ -53,19 +52,39 @@ export default function Home() {
 							<div>
 								<div className={styles.travel_types}>
 									<div>
-										<img src="/assets/home.jpg" alt="home" />
+										<Image
+											src="/assets/home.jpg"
+											alt="home"
+											width={2000}
+											height={2000}
+										/>
 										<p>Ferry</p>
 									</div>
 									<div>
-										<img src="/assets/home.jpg" alt="home" />
+										<Image
+											src="/assets/home.jpg"
+											alt="home"
+											width={2000}
+											height={2000}
+										/>
 										<p>Boat</p>
 									</div>
 									<div>
-										<img src="/assets/home.jpg" alt="home" />
+										<Image
+											src="/assets/home.jpg"
+											alt="home"
+											width={2000}
+											height={2000}
+										/>
 										<p>Cab</p>
 									</div>
 									<div>
-										<img src="/assets/home.jpg" alt="home" />
+										<Image
+											src="/assets/home.jpg"
+											alt="home"
+											width={2000}
+											height={2000}
+										/>
 										<p>Activity</p>
 									</div>
 								</div>
@@ -186,91 +205,7 @@ export default function Home() {
 						</p>
 					</div>
 				</div>
-				{/* <div className={styles.wrapper}>
-					<h1>Travel guides</h1>
-					<div className={styles.card_container}>
-						<Card
-							hoverable
-							style={{
-								width: 250,
-								marginBlock: "1rem"
-							}}
-							cover={
-								<img
-									alt="example"
-									src="https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png"
-									style={{ height: 150, objectFit: "cover" }}
-								/>
-							}
-						>
-							<Meta title="Europe" />
-						</Card>
-						<Card
-							hoverable
-							style={{
-								width: 250,
-								marginBlock: "1rem"
-							}}
-							cover={
-								<img
-									alt="example"
-									src="https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png"
-									style={{ height: 150, objectFit: "cover" }}
-								/>
-							}
-						>
-							<Meta title="Europe" />
-						</Card>
-						<Card
-							hoverable
-							style={{
-								width: 250,
-								marginBlock: "1rem"
-							}}
-							cover={
-								<img
-									alt="example"
-									src="https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png"
-									style={{ height: 150, objectFit: "cover" }}
-								/>
-							}
-						>
-							<Meta title="Europe" />
-						</Card>
-						<Card
-							hoverable
-							style={{
-								width: 250,
-								marginBlock: "1rem"
-							}}
-							cover={
-								<img
-									alt="example"
-									src="https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png"
-									style={{ height: 150, objectFit: "cover" }}
-								/>
-							}
-						>
-							<Meta title="Europe" />
-						</Card>
-						<Card
-							hoverable
-							style={{
-								width: 250,
-								marginBlock: "1rem"
-							}}
-							cover={
-								<img
-									alt="example"
-									src="https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png"
-									style={{ height: 150, objectFit: "cover" }}
-								/>
-							}
-						>
-							<Meta title="Europe" />
-						</Card>
-					</div>
-				</div> */}
+
 				<div className={styles.wrapper}>
 					<h1>Popular Routes</h1>
 					<Card title="Thailand" style={{ marginBottom: ".5rem" }}>
@@ -366,10 +301,12 @@ export default function Home() {
 									hoverable
 									style={{ width: 300 }}
 									cover={
-										<img
+										<Image
 											alt="example"
-											src="https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png"
+											src="/assets/home.jpg"
 											style={{ height: 200, objectFit: "cover" }}
+											width={2000}
+											height={2000}
 										/>
 									}
 								>
@@ -426,5 +363,3 @@ export default function Home() {
 		</div>
 	);
 }
-
-
