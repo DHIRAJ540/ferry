@@ -263,7 +263,7 @@ export default function Home() {
 							with our online ferry booking system integrated with all popular
 							ferry companies in Andaman. Search ferry between two destinations
 							like Port Blair to Havelock, Havelock to Neil, Neil to Port Blair
-							and compare different company's ferry tickets offer and prices at
+							and compare different companys ferry tickets offer and prices at
 							one place and book instantly through us.
 						</p>
 						<p>
@@ -287,7 +287,7 @@ export default function Home() {
 						</p>
 						<p>
 							Ferry tickets in Andaman can get really expensive at the last
-							minute or even worse, won't be available, so book tickets for
+							minute or even worse, wont be available, so book tickets for
 							Andaman and Nicobar Island ferries online to avoid inconvenience
 						</p>
 					</div>
@@ -296,7 +296,7 @@ export default function Home() {
 					<h4>Explore activities</h4>
 					<div className={styles.tours}>
 						{TOURS.map((item, index) => (
-							<div>
+							<div key={index}>
 								<Card
 									hoverable
 									style={{ width: 300 }}
