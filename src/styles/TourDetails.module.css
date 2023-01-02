@@ -108,6 +108,10 @@
 }
 
 @media (max-width: 768px) {
+	.wrapper {
+		padding: 1rem;
+	}
+
 	.details_container {
 		flex-direction: column;
 	}

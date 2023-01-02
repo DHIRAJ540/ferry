@@ -21,3 +21,18 @@
 	font-weight: normal;
 	color: #444;
 }
+
+@media (max-width: 768px) {
+	.wrapper {
+		padding: 1rem;
+		max-width: 100%;
+	}
+
+	.contact_details {
+		flex-direction: column;
+	}
+
+	.contact_details > div {
+		width: 100%;
+	}
+}
