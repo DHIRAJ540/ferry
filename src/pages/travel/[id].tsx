@@ -128,6 +128,7 @@ const TravelDetails = () => {
 									TOURS[0].mapImages.length > 0 &&
 									TOURS[0].mapImages.map((item, index) => (
 										<Image
+											key={index}
 											height={2000}
 											width={2000}
 											src={item}
