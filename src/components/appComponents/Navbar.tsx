@@ -23,12 +23,13 @@ const Navbar = () => {
 
 	const items = [
 		{ label: "Home", key: "" },
+		{ label: "More in Andaman", key: "more" },
 		{ label: "Ferry", key: "ferry" },
+		{ label: "Boat", key: "boat" },
+		{ label: "Cab", key: "cab" },
 		{ label: "Destinations", key: "destinations" },
 		{ label: "Tour Planner", key: "tour-planner" },
-		{ label: "Manage Bookings", key: "manage-bookings" },
-		{ label: "Blog", key: "blog" },
-		{ label: "about", key: "about" },
+		{ label: "Cancel/Reschedule", key: "cancel" },
 		{ label: "contact", key: "contact" }
 	];
 

@@ -1,0 +1,36 @@
+.right_container {
+	width: 100%;
+	background-color: rgb(241, 241, 241);
+	border-radius: 10px;
+	padding: 1rem;
+}
+
+.right_container > div {
+	display: flex;
+	flex-direction: column;
+	margin-left: 0.5rem;
+}
+
+.right_container h3,
+.right_container h5 {
+	margin-block: 0.5rem;
+	color: #444;
+	font-weight: 500;
+}
+
+.right_container > div a {
+	font-size: 0.8rem;
+	margin-block: 0.3rem;
+	color: #297c84 !important ;
+}
+
+.right_container > div a:hover {
+	text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+	.right_container {
+		width: 100%;
+		margin-top: 1rem;
+	}
+}

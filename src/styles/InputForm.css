@@ -1,0 +1,4 @@
+.contact_details > div input,
+.contact_details > div > div {
+	margin-bottom: 1rem;
+}

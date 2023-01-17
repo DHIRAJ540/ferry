@@ -17,6 +17,7 @@ const TourPlanner = () => {
 	return (
 		<div>
 			<Navbar />
+
 			<div className={styles.wrapper}>
 				<div className={styles.input_container}>
 					<div>

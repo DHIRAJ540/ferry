@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 
+import { ArticleJsonLd, NextSeo } from "next-seo";
 import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
@@ -12,9 +13,10 @@ import Footer from "@components/appComponents/Footer";
 import Faq from "@components/pageComponents/Faq";
 import styles from "../styles/Tour.module.css";
 import FAQS from "@constants/faqs";
+import { useRouter } from "next/router";
 
 export default function TourPage({
-	frontmatter: { cover_image, table_data },
+	frontmatter: { cover_image, table_data, title, description },
 	content
 }) {
 	const columns = [
@@ -41,9 +43,28 @@ export default function TourPage({
 		}
 	];
 
+	const router = useRouter();
+	const { slug } = router.query;
+
 	return (
 		<div>
 			<Navbar />
+			<NextSeo title={title} description={description} />
+			<ArticleJsonLd
+				title={title}
+				description={description}
+				url={`https://example.com/${slug}`}
+				datePublished="2015-02-05T08:00:00+08:00"
+				authorName={[
+					{
+						name: "Jane Blogs",
+						url: "https://example.com"
+					}
+				]}
+				publisherName="Gary Meehan"
+				publisherLogo="/assets/home.png"
+				images={["/assets.home.png"]}
+			/>
 			<Image
 				alt="tour_image"
 				src={cover_image}
@@ -102,7 +123,7 @@ export async function getStaticPaths() {
 		}
 	}));
 
-	console.log(paths);
+	// console.log(paths);
 
 	return {
 		paths,

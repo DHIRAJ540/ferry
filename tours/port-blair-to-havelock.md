@@ -2,70 +2,34 @@
 slug: "port-blair-to-havelock"
 date: "0/0/0"
 cover_image: "/assets/home.jpg"
+title: "Port Blair To Havelock ticket booking"
+description: "Ferry/cruise services are the only way to reach Havelock since there is no road
+linking Port Blair to Havelock for land transportation. Private Ferry and Luxury
+cruises operate daily from Port Blair to Havelock scheduled morning and
+afternoon trips from Haddo Jetty in Port Blair."
 table_data:  [
 		{
 			key: "1",
-			ship: "Green Ocean 2",
-			departure: "6:00 AM",
-			arrival: "8:00 AM",
+			ship: "Speed Boat",
+			departure: "9:30 AM",
+			arrival: "12:30 AM",
 			book: "Book Ticket"
 		},
 		{
 			key: "2",
-			ship: "Green Ocean 2",
-			departure: "6:00 AM",
-			arrival: "8:00 AM",
+			ship: "Speed Boat",
+			departure: "10:00 AM",
+			arrival: "1:30 AM",
 			book: "Book Ticket"
 		},
 		{
 			key: "3",
-			ship: "Green Ocean 2",
-			departure: "6:00 AM",
-			arrival: "8:00 AM",
+			ship: "Speed Boat",
+			departure: "10:30 AM",
+			arrival: "2:30 AM",
 			book: "Book Ticket"
 		},
-		{
-			key: "4",
-			ship: "Green Ocean 2",
-			departure: "6:00 AM",
-			arrival: "8:00 AM",
-			book: "Book Ticket"
-		},
-		{
-			key: "5",
-			ship: "Green Ocean 2",
-			departure: "6:00 AM",
-			arrival: "8:00 AM",
-			book: "Book Ticket"
-		},
-		{
-			key: "6",
-			ship: "Green Ocean 2",
-			departure: "6:00 AM",
-			arrival: "8:00 AM",
-			book: "Book Ticket"
-		},
-		{
-			key: "7",
-			ship: "Green Ocean 2",
-			departure: "6:00 AM",
-			arrival: "8:00 AM",
-			book: "Book Ticket"
-		},
-		{
-			key: "8",
-			ship: "Green Ocean 2",
-			departure: "6:00 AM",
-			arrival: "8:00 AM",
-			book: "Book Ticket"
-		},
-		{
-			key: "9",
-			ship: "Green Ocean 2",
-			departure: "6:00 AM",
-			arrival: "8:00 AM",
-			book: "Book Ticket"
-		}
+		
 	]
 ---
 

@@ -107,6 +107,19 @@
 	margin-right: 1rem;
 }
 
+.images {
+	display: flex;
+	align-items: center;
+	gap: 2rem;
+	flex-wrap: wrap;
+}
+
+.travel_map {
+	height: 300px;
+	width: 300px;
+	object-fit: cover;
+}
+
 @media (max-width: 768px) {
 	.wrapper {
 		padding: 1rem;

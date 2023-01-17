@@ -1,5 +1,6 @@
 import React from "react";
 
+import { ArticleJsonLd, NextSeo } from "next-seo";
 import { Input, Select } from "antd";
 const { TextArea } = Input;
 
@@ -17,6 +18,21 @@ const Contact = (props: Props) => {
 
 	return (
 		<div>
+			<ArticleJsonLd
+				title="Contact | FerryAsia.com"
+				description="26 , RGT Road, Port Blair, Andaman and Nicobar Islands 744104, India, mail: info@ferryasia.com, tel:+918900913888, tel:+913092231704"
+				url="https://example.com/contact"
+				datePublished="2015-02-05T08:00:00+08:00"
+				authorName={[
+					{
+						name: "Jane Blogs",
+						url: "https://example.com"
+					}
+				]}
+				publisherName="Gary Meehan"
+				publisherLogo="/assets/home.png"
+				images={["/assets.home.png"]}
+			/>
 			<Navbar />
 			<div className={styles.wrapper}>
 				<div>

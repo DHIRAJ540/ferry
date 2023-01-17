@@ -1,6 +1,9 @@
 ---
 slug: "ferry-cruise-connectivity-in-andaman-nicobar-islands"
 title: "Ferry cruise in andaman nicobar islands"
+description: "Havelock and Neil island are most visited island in Andamans are connected with
+Port Blair city with daily Ferry Services which Transfers tourist between these
+three destinations i.e Port Blair , Havelock and Neil islands."
 date: "0/0/0"
 cover_image: "/assets/home.jpg"
 ---
