@@ -49,7 +49,7 @@ export default function TourPage({
 	return (
 		<div>
 			<Navbar />
-			<NextSeo title={title} description={description} />
+			{/* <NextSeo title={title} description={description} /> */}
 			<ArticleJsonLd
 				title={title}
 				description={description}

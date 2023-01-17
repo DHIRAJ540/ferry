@@ -6,6 +6,9 @@ Port Blair city with daily Ferry Services which Transfers tourist between these
 three destinations i.e Port Blair , Havelock and Neil islands."
 date: "0/0/0"
 cover_image: "/assets/home.jpg"
+table_data:  [
+		
+	]
 ---
 
 ## Ferry / Cruise Connectivity in Andaman Nicobar Islands
