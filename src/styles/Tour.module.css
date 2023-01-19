@@ -22,6 +22,19 @@
 .table::-webkit-scrollbar {
 	display: none;
 }
+.images {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 2rem;
+	flex-wrap: wrap;
+}
+
+.image {
+	width: 100%;
+	max-width: 400px;
+	margin-inline: auto;
+}
 
 .right_container {
 	width: 25%;
