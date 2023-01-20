@@ -16,7 +16,14 @@ import FAQS from "@constants/faqs";
 import { useRouter } from "next/router";
 
 export default function TourPage({
-	frontmatter: { cover_image, table_data, title, description, map_image },
+	frontmatter: {
+		cover_image,
+		table_data,
+		title,
+		description,
+		map_link,
+		images
+	},
 	content
 }) {
 	const columns = [
@@ -75,17 +82,33 @@ export default function TourPage({
 			<div className={styles.wrapper}>
 				<div className={styles.left_container}>
 					<div dangerouslySetInnerHTML={{ __html: marked(content) }}></div>
-					{map_image && (
+					{map_link && (
 						<div style={{ marginBottom: "2rem" }}>
 							<h3>Maps</h3>
 							<div className={styles.images}>
-								<Image
-									height={400}
-									width={2000}
-									src={map_image}
-									alt="map"
-									className={styles.image}
-								/>
+								<iframe
+									src={map_link}
+									width="600"
+									height="450"
+									loading="lazy"
+								></iframe>
+							</div>
+						</div>
+					)}
+
+					{images && (
+						<div style={{ marginBottom: "2rem" }}>
+							<h3>Image gallery</h3>
+							<div className={styles.images}>
+								{images.map((item, index) => (
+									<Image
+										className={styles.image}
+										src={item}
+										alt="tour image"
+										width={2000}
+										height={2000}
+									/>
+								))}
 							</div>
 						</div>
 					)}

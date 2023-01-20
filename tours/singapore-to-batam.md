@@ -2,7 +2,8 @@
 slug: "singapore-to-batam"
 date: "0/0/0"
 cover_image: "/assets/home.jpg"
-map_image: "/assets/singapore.jpg"
+map_link: "https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d214667.48232633757!2d103.79171188651603!3d1.2855878990545182!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sin!4v1674238229834!5m2!1sen!2sin"
+images: ["/assets/home.jpg","/assets/home.jpg","/assets/home.jpg","/assets/home.jpg","/assets/home.jpg","/assets/home.jpg" ]
 title: "Singapore to Batam ticket booking"
 description: "Batam is a beautiful Indonesian  tropical island 30 km  south east of Singapore .batam is singaporian is the go to island for singaporian and tourist visiting to singapore for a quick getaway for a island experience with beaches , bars and tropical vibes. Though many Singaporeans travel from Singapore to Batam Island for its bars, casinos and golf resorts, that’s not all that the island has to offer."
 table_data:  [
