@@ -102,6 +102,7 @@ export default function TourPage({
 							<div className={styles.images}>
 								{images.map((item, index) => (
 									<Image
+										key={index}
 										className={styles.image}
 										src={item}
 										alt="tour image"
