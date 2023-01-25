@@ -16,7 +16,7 @@ const Footer: React.FC = () => {
 					width={609}
 					height={59}
 					alt="Payment-icons"
-					style={{ width: "100%"}}
+					style={{ width: "100%" }}
 				/>
 				<p>
 					All Major Credit/Debit cards, UPI, Google Pay, PhonePe amd BHIM
@@ -41,7 +41,9 @@ const Footer: React.FC = () => {
 					</div>
 					<div className={styles.footer_details_section}>
 						<h2>Ferry Partners</h2>
-						<a href="">Green Ocean</a>
+						<Link href="/operators/green-ocean-ferry-ticket-booking">
+							Green Ocean
+						</Link>
 						<a href="">Makruzz</a>
 						<a href="">ITTPL Majestic</a>
 					</div>

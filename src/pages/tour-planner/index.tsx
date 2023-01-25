@@ -10,6 +10,7 @@ import Footer from "../../components/appComponents/Footer";
 import styles from "../../styles/TourPlanner.module.css";
 import PLACE_OPTIONS from "../../constants/places";
 import TOURS from "../../constants/tours";
+import Link from "next/dist/client/link";
 
 type Props = {};
 
@@ -88,21 +89,23 @@ const TourPlanner = () => {
 						<div className={styles.tours}>
 							{TOURS.map((item, index) => (
 								<div key={index}>
-									<Card
-										hoverable
-										style={{ width: 300 }}
-										cover={
-											<Image
-												alt="example"
-												src="/assets/home.jpg"
-												style={{ height: 200, objectFit: "cover" }}
-												width={2000}
-												height={2000}
-											/>
-										}
-									>
-										<Meta title={item.title} description={item.subtitle} />
-									</Card>
+									<Link href={"/travel/id"}>
+										<Card
+											hoverable
+											style={{ width: 300 }}
+											cover={
+												<Image
+													alt="example"
+													src="/assets/home.jpg"
+													style={{ height: 200, objectFit: "cover" }}
+													width={2000}
+													height={2000}
+												/>
+											}
+										>
+											<Meta title={item.title} description={item.subtitle} />
+										</Card>
+									</Link>
 								</div>
 							))}
 						</div>

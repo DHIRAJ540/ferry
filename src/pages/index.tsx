@@ -2,6 +2,7 @@ import Head from "next/head";
 import Image from "next/image";
 import { useRouter } from "next/router";
 import { CSSProperties } from "react";
+import Link from "next/link";
 
 import { ArticleJsonLd, NextSeo } from "next-seo";
 import {
@@ -393,21 +394,23 @@ export default function Home() {
 					<div className={styles.tours}>
 						{TOURS.map((item, index) => (
 							<div key={index}>
-								<Card
-									hoverable
-									style={{ width: 300 }}
-									cover={
-										<Image
-											alt="example"
-											src="/assets/home.jpg"
-											style={{ height: 200, objectFit: "cover" }}
-											width={2000}
-											height={2000}
-										/>
-									}
-								>
-									<Meta title={item.title} description={item.subtitle} />
-								</Card>
+								<Link href={"/singapore-to-batam"}>
+									<Card
+										hoverable
+										style={{ width: 300 }}
+										cover={
+											<Image
+												alt="example"
+												src="/assets/home.jpg"
+												style={{ height: 200, objectFit: "cover" }}
+												width={2000}
+												height={2000}
+											/>
+										}
+									>
+										<Meta title={item.title} description={item.subtitle} />
+									</Card>
+								</Link>
 							</div>
 						))}
 					</div>
